@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+#sketchPad {
+    height: 800px;
+    width: 600px;
+    border: solid;
+    border-color: blue;
+    box-shadow: 3px 3px 32px blueviolet;
+    margin-right: 16px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction:wrap;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+
+

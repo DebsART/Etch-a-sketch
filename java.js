@@ -1,22 +1,25 @@
-let squareDiv = document.createElement("div");
-squareDiv.classList.add('sketchPad');
 
-squareDiv.style.width = '16px';
-squareDiv.style.height = '16px';
+let sketchPad = document.getElementById("sketchPad");
 
-let gridSquare = document.createElement('div')
-gridSquare.classList.add('gridSquare');
-gridSquare.style.border = 'solid';
-gridSquare.style.borderColor = 'black';
+//creates the square
+function divBoxes() {
+    let div = document.createElement('div');
+    div.style.width = '16px';
+    div.style.height = '16px';
+    div.style.borderColor ='black';
+    return div;
+}
 
-
-function grid(gridSquare) {
-    for (let i = 0; i < 256; i++) {
-        squareDiv.appendChild(gridSquare)
+// makes square into grid and appends them to html
+function grid(size=16) {
+    for (let i = 0; i <= size ; i++) {
+        for (let x = 0; x<=size; x++) {
+            sketchPad.appendChild(divBoxes(sketchPad.clientWidth / 16))
+        }
     };
 };
 
+console.log(grid(size=16));
 
-let container = document.querySelector("#container");
-container.appendChild(squareDiv);
+
 
