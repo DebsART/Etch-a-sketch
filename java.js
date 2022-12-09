@@ -7,7 +7,11 @@ function divBoxes() {
     div.classList.add('divBoxes');
     div.style.width = '40px';
     div.style.height = '40px';
+    div.style.backgroundColor ='black';
     div.style.borderColor ='black';
+    div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = 'white';
+    });
     return div;
 }
 
@@ -17,6 +21,10 @@ function grid() {
             sketchPad.appendChild(divBoxes());
         }
     };
+
+
+
+}
 
 
 console.log(grid())
