@@ -3,15 +3,22 @@
 }
 
 #sketchPad {
-    height: 800px;
-    width: 600px;
+    height: 644px;
+    width: 646px;
     border: solid;
     border-color: blue;
     box-shadow: 3px 3px 32px blueviolet;
     margin-right: 16px;
     margin-top: 16px;
-    display: flex;
-    flex-direction:wrap;
+    
+}
+
+.divBoxes {
+    display: inline-grid;
+    border-bottom: solid 0.1px;
+    border-right:solid 0.1px ;
+    margin-top:-2px;
+    margin-bottom: -2px;
 }
 
 body {
