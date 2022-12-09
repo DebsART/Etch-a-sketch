@@ -21,6 +21,11 @@
     margin-bottom: -2px;
 }
 
+.divBoxes:hover {
+    background-color: white;
+    box-shadow: 2px 2px 32px white;
+}
+
 body {
     display: flex;
     flex-direction: row;
