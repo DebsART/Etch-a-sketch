@@ -26,11 +26,21 @@
     box-shadow: 2px 2px 32px white;
 }
 
+#eraser:hover {
+    box-shadow: black;
+}
+
 body {
     display: flex;
     flex-direction: co;
     justify-content:flex-end;
+    background-color:midnightblue;
 }
 
-
+h1 {
+    color:cyan;
+}
+button {
+    box-shadow: 2px 2px 22px blueviolet;
+}
 

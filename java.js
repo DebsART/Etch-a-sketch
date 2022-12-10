@@ -39,6 +39,13 @@ let changeColor = document.querySelector('#changeColor');
             div.style.backgroundColor = 'black';
         });
     });
+
+    let colorInput = document.querySelector("#color");
+    colorInput.addEventListener('input', ()=> {
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = colorInput.value;
+        });
+    });
     return div;
 }
 
