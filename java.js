@@ -15,7 +15,7 @@ function divBoxes() {
         div.style.backgroundColor = 'white';
      });
     
-    let changeColor = document.querySelector('#changeColor');
+let changeColor = document.querySelector('#changeColor');
  
 //randomized colors when 'change color' button is clicked
     changeColor.addEventListener('click',() => {
@@ -25,6 +25,20 @@ function divBoxes() {
         });
       });
     
+    let reset = document.querySelector('#reset');
+    reset.addEventListener('click', () => {
+        div.style.backgroundColor ='black';
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor ='white';
+        });
+    });
+
+    let eraser = document.querySelector('#eraser');
+    eraser.addEventListener('click', () =>{
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = 'black';
+        });
+    });
     return div;
 }
 
