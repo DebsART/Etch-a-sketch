@@ -8,7 +8,7 @@ let rangeValue = document.querySelector("#rangeValue");
 //creates the square
 function divBoxes() {
     let div = document.createElement('div');
-    sketchPad.setAttribute('style', `grid-template-columns: repeat(${sliderRange.value}, 2fr); grid-template-rows: repeat(${sliderRange.value}, 2fr);`);
+    sketchPad.setAttribute('style', 'grid-template-columns: repeat(16, 2fr); grid-template-rows: repeat(16, 2fr);');
 
     div.classList.add('divBoxes');
    div.style.height ='39px';
@@ -72,7 +72,7 @@ function grid(size=16) {
 
    
 
-
+  
     
 
 
