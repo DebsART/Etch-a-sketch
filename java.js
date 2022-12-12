@@ -1,7 +1,6 @@
 
 let sketchPad = document.getElementById("sketchPad");
-let sliderRange = document.querySelector("#sliderRange");
-let rangeValue = document.querySelector("#rangeValue");
+
 
 
 
@@ -65,21 +64,14 @@ let changeColor = document.querySelector('#changeColor');
 // makes square into grid and appends them to html
 function grid(size=16) {
     for (let i = 0; i < size*size ; i++) {
-        sketchPad.appendChild(divBoxes(sketchPad.height/size));
-        sketchPad.appendChild(divBoxes(sketchPad.width/size));
+        sketchPad.appendChild(divBoxes());
 
         }
     };
 
    
 
-    sliderRange.addEventListener('input',() => {
-        sliderRange.addEventListener('mousemove', () => {
-             grid(size = sliderRange.value);
-    });
-
-});
-
+    
     
 
 
