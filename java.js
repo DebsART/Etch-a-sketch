@@ -1,12 +1,18 @@
 
 let sketchPad = document.getElementById("sketchPad");
+let sliderRange = document.querySelector("#sliderRange");
+let rangeValue = document.querySelector("#rangeValue");
+
+
 
 //creates the square
 function divBoxes() {
     let div = document.createElement('div');
+    sketchPad.setAttribute('style', `grid-template-columns: repeat(${sliderRange.value}, 2fr); grid-template-rows: repeat(${sliderRange.value}, 2fr);`);
+
     div.classList.add('divBoxes');
-    div.style.width = '40px';
-    div.style.height = '40px';
+   div.style.height ='39px';
+   div.style.width ='39px';
     div.style.backgroundColor ='black';
     div.style.borderColor ='black';
 
@@ -46,24 +52,31 @@ let changeColor = document.querySelector('#changeColor');
             div.style.backgroundColor = colorInput.value;
         });
     });
-    return div;
-}
+
+    
+
+ return div;
+};
+
+
+
 
 
 // makes square into grid and appends them to html
-function grid() {
-    for (let i = 0; i < 256 ; i++) {
-            sketchPad.appendChild(divBoxes());
+function grid(size=16) {
+    for (let i = 0; i < size*size ; i++) {
+        sketchPad.appendChild(divBoxes());
+
         }
     };
 
-    
    
+
+
+    
+
 
 
 
 
 console.log(grid())
-
-
-

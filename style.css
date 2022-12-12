@@ -3,22 +3,26 @@
 }
 
 #sketchPad {
-    height: 644px;
-    width: 646px;
+    height: 630px;
+    width: 631px;
     border: solid;
     border-color: blue;
     box-shadow: 3px 3px 32px blueviolet;
-    margin-right: 16px;
     margin-top: 16px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
     
 }
 
 .divBoxes {
     display: inline-grid;
-    border-bottom: solid 0.1px;
-    border-right:solid 0.1px ;
+    flex-shrink: 1;
+    border-bottom:0.1px;
+    border-right:0.1px ;
     margin-top:-2px;
     margin-bottom: -2px;
+  
 }
 
 .divBoxes:hover {
@@ -32,15 +36,58 @@
 
 body {
     display: flex;
-    flex-direction: co;
-    justify-content:flex-end;
+    flex-shrink: initial;
+    flex-direction: column;
     background-color:midnightblue;
+    min-width:100%;
+    max-height: 100%;
+    po
+}
+
+#content {
+    display: flex;
+    flex:1;
+    gap:15%;
+    justify-content: center;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    row-gap: 15px;
 }
 
 h1 {
     color:cyan;
+    font-size: 80px;
+    text-shadow: 2px 2px 22px cyan;
+    text-align: right;
 }
+
+#pickColor {
+    text-align: center;
+}
+
+h3 {
+color: cyan;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+   gap:15%;
+}
+img {
+    height:120px;
+    width:100px;
+    margin-top: 30px;
+}
+
 button {
-    box-shadow: 2px 2px 22px blueviolet;
+    box-shadow: 2px 3px 22px blueviolet;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
 }
 
