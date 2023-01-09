@@ -1,28 +1,22 @@
-
 let sketchPad = document.getElementById("sketchPad");
-
-
-
-
 //creates the square
 function divBoxes() {
-    let div = document.createElement('div');
-    sketchPad.setAttribute('style', 'grid-template-columns: repeat(16, 2fr); grid-template-rows: repeat(16, 2fr);');
 
+    let div = document.createElement('div');
     div.classList.add('divBoxes');
-   div.style.height ='39px';
-   div.style.width ='39px';
+    div.style.height ='100%';
+    div.style.width ='100%';
     div.style.backgroundColor ='black';
     div.style.borderColor ='black';
 
-//makes squares white during mouse over event
+    //makes squares white during mouse over event
     div.addEventListener('mouseover', () => {
         div.style.backgroundColor = 'white';
      });
     
-let changeColor = document.querySelector('#changeColor');
+    let changeColor = document.querySelector('#changeColor');
  
-//randomized colors when 'change color' button is clicked
+    //randomized colors when 'change color' button is clicked
     changeColor.addEventListener('click',() => {
         div.addEventListener('mouseover', () => {
             let colors = Math.floor(Math.random() * 360);
@@ -54,7 +48,8 @@ let changeColor = document.querySelector('#changeColor');
 
     
 
- return div;
+    return div;
+    
 };
 
 
@@ -62,14 +57,19 @@ let changeColor = document.querySelector('#changeColor');
 
 
 // makes square into grid and appends them to html
-function grid(size=16) {
-    for (let i = 0; i < size*size ; i++) {
+
+    let sliderRange = document.querySelector('#sliderRange');
+    sliderRange.addEventListener('mouseup', ()=>{
+        let size = sliderRange.value;
+        sketchPad.setAttribute('style', 'grid-template-columns: repeat(' + size + ', 2fr); grid-template-rows: repeat(' + size + ', 2fr);');
+
+    
+        for (let i = 0; i < size*size ; i++) {
         sketchPad.appendChild(divBoxes());
 
-        }
-    };
+    }
+})
 
-   
 
     
     
@@ -78,4 +78,3 @@ function grid(size=16) {
 
 
 
-console.log(grid())
