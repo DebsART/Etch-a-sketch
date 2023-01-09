@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+#sketchPad {
+    height: 630px;
+    width: 631px;
+    border: solid;
+    border-color: blue;
+    box-shadow: 3px 3px 32px blueviolet;
+    margin-top: 16px;
+    padding: 0px;
+    display: grid;
+    flex-wrap: wrap;
+    
+}
+
+.divBoxes {
+    /* display: inline-grid; */
+    flex-shrink: 1;
+    border-bottom:0.1px;
+    border-right:0.1px ;
+    margin-top:-2px;
+    margin-bottom: -2px;
+  
+}
+
+.divBoxes:hover {
+    background-color:white;
+    box-shadow: 2px 2px 32px white;
+}
+
+#eraser:hover {
+    box-shadow: black;
+}
+
+body {
+    display: flex;
+    flex-shrink: initial;
+    flex-direction: column;
+    background-color:midnightblue;
+    min-width:100%;
+    max-height: 100%;
+ 
+}
+
+#content {
+    display: flex;
+    flex:1;
+    gap:15%;
+    justify-content: center;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    row-gap: 15px;
+}
+
+h1 {
+    color:cyan;
+    font-size: 80px;
+    text-shadow: 2px 2px 22px cyan;
+    text-align: right;
+}
+
+#pickColor {
+    text-align: center;
+}
+
+h3 {
+color: cyan;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+   gap:15%;
+}
+img {
+    height:120px;
+    width:100px;
+    margin-top: 30px;
+}
+
+button {
+    box-shadow: 2px 3px 22px blueviolet;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+}
+
